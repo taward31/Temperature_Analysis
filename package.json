@@ -1,23 +1,12 @@
 {
-  "name": "terminal",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lechien73/terminal.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lechien73/terminal/issues"
-  },
-  "homepage": "https://github.com/lechien73/terminal#readme",
-  "dependencies": {
-    "node-static": "^0.7.11",
-    "node-pty": "^0.10.1",
-    "total4": "^0.0.45"
-  }
+  "type": "service_account",
+  "project_id": "temperatureanalysis-366721",
+  "private_key_id": "f2a5a5687a76530b60b86663f72c3d981cc8a1b4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7M4onaUG57t7K\nM6bL9oWfcTU5ZqkWQWA73UUUe5PHj+Ooxhqi3M1w5MQwBILdyDKyh6JsafKsjWUy\nOGgfEdRNDxiyST46VuzhnFCe6v4Icq/O+btGVGy0DY0GoU5ax4ZKwJSIDqjhDuwa\nJMr2Mj8hcP7UQD30T8F2tW6k2Ex+PY7yxP0GCFZxfEQYCcvpE1MfjU4vyYdQk/8A\nbrP1kkkOnZ/EZo10S4Yv2baGyE2uuNCjEO7sswgBDOX6cVUb6uw49i8Oha6MQoFk\nWkI2CF6rssAZSer8Jh6yZN8/dSA7xR9xafGYwl69SdkSUZ2r0IAAF5R2FjFB29OI\nbjHbKs+dAgMBAAECggEAC/AsaDkuGUYqkZEL2vfYoNN7+Nzl6BbZD6rw/+57PQ+y\novL9RF5vQJA/kwNaotD6ALN7JXhNOE6tFy/h3fy0V19g1w/U3Cy/ybR/BLTI6K+D\nAYtLXjUTQ0ProYexwu10pY7p+fzwrVJBts9wB8AqZql5gCjXpUgHzFhOMHeLIJq+\nrnTahf5DqRs1tFINIlmNA+sD8yrPdIGJJK3wX/xtfLTkmjwrdHmkGajlWWwy0d7u\nPA4D38texY9ROHbYom49FUJ1MshUOylMIQyl3M8loEYN7lNiWWNoYwDay5sE/R4c\nQjneZgY1aBWnmEUBrAYEIT/DMHiYnREmASHo5rbOgQKBgQD8hs9zZ8Qpfsm3EMOu\nUgv4NXJVi7QRlkUNIEjKxmdUMvMS3rlaHO0E81QxJR3x8i7w04ZPlWoc+5viUSQu\n/YNEDIlD3O76s6riZg06n+pY/q6jun7s0dBOYkHy5UbQHHBVUJac470jCLd8d8lG\n8fCSTrPzxXO5lHhMYjOA1btkgQKBgQC9xrUwGMY0klro+hQmzeehJHeKzH6c4m85\n2sXzRmzcW+kxXNjglyR7279zOJUdR7bvM4lMtST/5GpwIKM/p4LgtGS5QhWYuiH3\nvL+wi0UXB86MWOnvYbeh7gvK1ZCseP+3ooZuTUr5N9j4SBxs8EFnDcJwsxkOt1TV\nSQlDgmXtHQKBgQDU2ayyUZx+fWf47iCCJpYAOMyOXpsA1/CMB9JTWLhvuCI6nZEN\n66O8sH0ej3KWJNR8GU70dbRjiZDzSgF9uiGSkh6BHRAyMI6xFePArloReVoql1+0\nrYUvDJMZ8Tem4tGsl6jbxPn/NbGzMCRvsC5epAf6SUwp+IMNnxhaV80EAQKBgFtu\nnCcTGJOFm+U5b3IOrDV4E1w9EBdYBQyTueFuoc49Pgm5WQhD6aD/C6tgrH8R6TIv\n20uozq23CA0DvINTmnvWjdyv2SXfL7RjLNvLDbt92GbIA9WAd++9d9L+uBhQp6t6\n01fbR27xGEjuvTtDOc+D0pVnxH/Rlj64VI1BCwiFAoGBAJDBYXBYX9vilpb5ADRU\n7mW5cXpF12dPplTgT6yNqvA2r5lyvcFhElQmw/veSqhmVc7iIDawaTrp3Y+Rq3Cb\nCissmuAbw+upldkpwv1QI3xlRoLjZlGb5GlJmfoiPHVF8yWmJbwzPrX6fdHurrOh\nLIi3dLKK/dVK4Pc7ncLALcGJ\n-----END PRIVATE KEY-----\n",
+  "client_email": "tom-419@temperatureanalysis-366721.iam.gserviceaccount.com",
+  "client_id": "102094075774872147962",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tom-419%40temperatureanalysis-366721.iam.gserviceaccount.com"
 }
