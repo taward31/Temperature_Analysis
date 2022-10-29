@@ -33,3 +33,5 @@ Happy coding!
 Credits List
 
 https://docs.gspread.org/en/latest/user-guide.html
+
+https://www.geeksforgeeks.org/python-converting-all-strings-in-list-to-integers/
