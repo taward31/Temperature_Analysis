@@ -1,4 +1,3 @@
-import statistics
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -17,8 +16,6 @@ SHEET = GSPREAD_CLIENT.open('Temperature_Cycle_Analysis')
 answer_1 = "blank"
 answer_2 = "blank"
 failcount = 0
-function = 0
-current_data = "blank"
 
 records = SHEET.worksheet('Records')
 
@@ -30,7 +27,6 @@ Intro --> N -->  successful_entry() --> retrieve() --> Summary --> Start
 
 
 def intro():
-    
     print("-------------------------------------------------\n")
     print("Welcome to the Temperature Analysis Program\n")
     print("------------------------------------------------\n")
@@ -43,30 +39,18 @@ def intro():
     print("Do you want to Input new Temperature Readings ?")
     answer_1 = input("Enter your answer here using the Y or N Key : ")
     print(f"You have Answered {answer_1}")
-    check_answer_intro(answer_1)
+    check_answer_1(answer_1)
+
     return
 
 
-def main():
-    global function
- 
-    if function == 1:
-        load_cylce_data()  
-    elif function == 3:
-        data_analysis()
-    elif function == 4:
-        store_data
-    
-
 def intro_short():
-    global failcount
-
     if failcount < 3:
         print(f"failed Attempts{failcount}")
         print("Do you want to Input new Temperature Readings ?")
         answer_1 = input("Enter your answer here using the Y or N Key : ")
         print(f"You have Answered {answer_1}")
-        check_answer_intro(answer_1)
+        check_answer_1(answer_1)
     else:
 
         print("-------------------------------------------------")
@@ -77,34 +61,42 @@ def intro_short():
         print("You Have Enter Data Wrong 3 Times")
         print("Looks like you need some coffee")
         print("Please come back later more alert")
-        failcount = 0
-
-        intro()
         
     return
- 
+
+
+def retrieve():
+    if failcount < 3:
+        print(f"failed Attempts{failcount}")
+        print("Do you want to Retrive Data for analysis ?")
+        answer_2 = input("Enter your answer here using the Y or N Key :")
+        check_answer_2(answer_2)
+        
+    else:
+        print("-------------------------------------------------")
+        print("-------------------------------------------------\n")
+        print("WARNING CAFFEINE LEVELS LOW ")
+        print("-------------------------------------------------")
+        print("-------------------------------------------------\n")
+        print("You Have Enter Data Wrong 3 Times")
+        print("Looks like you need some coffee")
+        print("Please come back later more alert")
+        
+    return
+
 
 def load_cylce_data():
-
-    global function
-    global current_data
-
     print("Please enter the Cycle Temperatures")
     print("Enter Ten Values Between 0-300 degress")
     print("Seperate the Values by a Comma (,)")
     current_cycle = input("Enter Here: ")
-    current_data = current_cycle.split(",")
-    print(f"{current_data}")
-    validate_data(current_data)
-    if validate_data(current_data):
-        print("data_Ok")
-        function = 3
-        main()
-    else:
-        print("data_NOk")
-        function = 1 
-        main()
+    data = current_cycle.split(",")
+    print(f"{data}")
+    validate_data(data)
+    data_analysis(data)
 
+    return
+    
 
 def validate_data(values):
     """
@@ -112,62 +104,96 @@ def validate_data(values):
     Raises ValueError if strings cannot be converted into int,
     or if there aren't exactly 6 values.
     """
-    global function
-
     try:
-        [int(value) for value in values]
         if len(values) != 10:
             raise ValueError(
-                f"Exactly 10 values required, you provided {len(values)}"
+                f"Exactly 6 values required, you provided {len(values)}"
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
-        return False
 
     return True
 
 
-def data_analysis():
-    global function
-    global current_data
-    print("Data Analysis")
-    print(f"{current_data}")
-    list_of_integers = list(map(int, current_data))
-    print(f"{list_of_integers}")
-    total = sum(list_of_integers)
-    print(total)
-    mean = total/10
-    print(f"Start Temperature =: {list_of_integers[0]}")
-    print(f"Average Temperature =: {mean}")
-    print(f"End Temperature =: {list_of_integers[9]}")
-    temp_max = max(list_of_integers) 
-    print(f"Max Temp =: {temp_max}")
-    temp_min = min(list_of_integers) 
-    print(f"Min Temp =: {temp_min}")
-    temp_range = temp_max - temp_min
-    print(f"Range =: {temp_range}")
-
-    return
-
-def store_data():
-
+def view_data():
+    print("Please Enter the Data Number you want to View")
+    print("Enter values between 1 and 10")
+    val_requested = input("Enter Here: ")
+    print(f"{val_requested}")
+    get_line_data(val_requested)
 
     return
 
 
-def check_answer_intro(answer_1):
-    global function
-    print(f"This is answer 1{answer_1}")
+def get_line_data(val_requested):
+    values_list = records.row_values(val_requested)
+    print(f"{values_list}")
+    value_1 = values_list[0]
+    value_2 = values_list[1]
+    value_3 = values_list[2]
+    value_4 = values_list[3]
+    value_5 = values_list[4]
+    value_6 = values_list[5]
+    value_7 = values_list[6]
+    value_8 = values_list[7]
+    value_9 = values_list[8]
+    value_10 = values_list[9]
+    total_value = [value_1 + value_2 + value_3 + value_4 + value_5 + 
+                   value_6 + value_7 + value_8 + value_9 + value_10]
+    print(f"{total_value}")
+    return 
+
+
+def data_analysis(data):
+
+    print(f"Data Analysis{data}")
+
+    print(f"{data}")
+    value_1 = data[0]
+    value_2 = data[1]
+    value_3 = data[2]
+    value_4 = data[3]
+    value_5 = data[4]
+    value_6 = data[5]
+    value_7 = data[6]
+    value_8 = data[7]
+    value_9 = data[8]
+    value_10 = data[9]
+    total_value = [value_1 + value_2 + value_3 + value_4 + value_5 + 
+                   value_6 + value_7 + value_8 + value_9 + value_10]
+    print(f"{total_value}")
+    return
+
+
+def check_answer_1(answer_1):
     if answer_1 == ("Y"):
-        function = 1
-        return 
+        successful_entry()
+        load_cylce_data()
+
     if answer_1 == ("N"):
-        function = 2
-        return
+        successful_entry()
+        retrieve()
     else:
         print("Data Entered Incorrect")
         count_fail()
         intro_short()
+    
+    return
+
+
+def check_answer_2(answer_2):
+    if answer_2 == ("Y"):
+        successful_entry()
+        view_data()
+
+    if answer_2 == ("N"):
+        successful_entry()
+        intro()
+    else:
+        print("Data Entered Incorrect")
+        count_fail()
+        retrieve()
+    
     return
 
 
@@ -184,4 +210,3 @@ def successful_entry():
 
 
 intro()
-main()

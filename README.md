@@ -35,3 +35,7 @@ Credits List
 https://docs.gspread.org/en/latest/user-guide.html
 
 https://www.geeksforgeeks.org/python-converting-all-strings-in-list-to-integers/
+
+https://www.freecodecamp.org/news/python-switch-statement-switch-case-example/
+
+https://www.w3schools.com/python/ref_stat_stdev.asp#:~:text=stdev()%20method%20calculates%20the,clustered%20closely%20around%20the%20mean.
