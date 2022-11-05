@@ -18,70 +18,11 @@ answer_2 = "blank"
 failcount = 0
 
 records = SHEET.worksheet('Records')
-
 data = records.get_all_values()
-"""
-Intro --> Y -->  successful_entry() --> load_cylce_data() --> Summary --> Start  
-Intro --> N -->  successful_entry() --> retrieve() --> Summary --> Start 
-"""
-lang = 0
-message = "empty_string"
 
+numRows = records.row_count  # Get the number of rows in the sheet
 
-def intro():
+print(f"{numRows}")
+insertRow = ["11", "22", "33"]
+records.insert_row(insertRow, 3)
 
-    global lang
-
-    if lang == 0:
-        func1()
-        
-    elif lang == 1:
-        func2()
-       
-    elif lang == 2:
-        func3()
-        
-    elif lang == 3:
-        func4()
-        
-    elif lang == 4:
-        func5()
-        return 
-
-
-def func1():
-    global lang
-    print("function_!")
-    lang = 2
-    intro()
-
-
-def func2():
-    global lang
-    print("function_2")
-    lang = 3
-    intro()
-
-
-def func3():
-    global lang
-    print("function_3")
-    lang = 4
-    intro()
-
-
-def func4():
-    global lang
-    print("function_4")
-    lang = 5
-    intro()
-
-
-def func5():
-    global lang
-    print("function_5")
-    lang = 6
-    intro()
-
-
-intro()
