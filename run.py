@@ -26,7 +26,7 @@ data = records.get_all_values()
 
 def intro():
     """
-    Welcome and Brief Description of What program does 
+    Welcome and Brief Description of What program does
     Asks User First Question and Calls Checking of Answer
     """
     print("-------------------------------------------------\n")
@@ -49,14 +49,13 @@ def main():
     Main Rountine Used to Navigate through the Program depending on what
     User inputs and wether it is valid or not 
     """
- 
     if function == 1:
-        load_cylce_data()  
+        load_cylce_data()
     elif function == 2:
         data_retrieve()
     elif function == 3:
         data_analysis()
-    
+
 
 def intro_short():
     """
@@ -140,14 +139,15 @@ def validate_data_single(values):
     or if there aren't exactly 10 values.
     """
     try:
-        [int(value) for value in values]
-        if len(values) != 1:
+        index = int(values)
+        if index >= 11:
             raise ValueError(
-                f"Exactly 1 values required, you provided {len(values)}"
+                "Value entered is to high please enter lower number"
             )
             return False
     except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")
+        print(f"Invalid data: {e}, please try again")
+        print("Valid Values are 1,2,3,4,5,6,7,8,9,10\n")
         return False
 
     return True
@@ -254,6 +254,7 @@ def get_data_gspread():
     global function
     print("Please choose what data index you want to analyse ?")
     data_id = input("please select number between 1 to 10 :  ")
+
     validate_data_single(data_id)
 
     if validate_data_single(data_id) and (data_id > '0'):
@@ -261,7 +262,7 @@ def get_data_gspread():
         data_rcvd = records.row_values(data_id)
         print(f"data_rcvd{data_rcvd}")
         current_data = data_rcvd
-        function = 3 
+        function = 3
         main()
     else:
         print(f"{data_id} Not a valid Number")
