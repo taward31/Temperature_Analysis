@@ -33,8 +33,8 @@ def intro():
     print("Welcome to the Temperature Analysis Program\n")
     print("------------------------------------------------\n")
     print("The Program Allows for the following,\n")
-    print(" 1 -  Data Loading to Google Sheets for storage ")
-    print(" 2 -  Data Analysis of the Temperature Cylce")
+    print(" 1 -  User Data Input for analysis ")
+    print(" 2 -  Data Analysis of the Temperature Cyclce")
     print(" 3 -  Data Retrieving from Sheet for Analysis\n")
     print("-------------------------------------------------")
     print("-------------------------------------------------\n")
@@ -107,6 +107,9 @@ def load_cylce_data():
         main()
     else:
         print("data input nOk")
+        print("Data should be in this type of format\n")
+        print("'10,30,50,120,200,220,222,221,220,50'\n")
+        print("\n")
         function = 1 
         main()
     return
@@ -126,7 +129,7 @@ def validate_data(values):
             )
             return False
     except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")
+        print(f"Invalid data: {e}, please try again.")
         return False
 
     return True
