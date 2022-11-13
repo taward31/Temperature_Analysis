@@ -47,7 +47,7 @@ def intro():
 def main():
     """
     Main Rountine Used to Navigate through the Program depending on what
-    User inputs and wether it is valid or not 
+    User inputs and wether it is valid or not
     """
     if function == 1:
         load_cylce_data()
@@ -59,10 +59,10 @@ def main():
 
 def log_data(data):
     """
-    Log Data  - Retrieves all Data from the Sheet then Indexes the Data 
-    Then saves the current data into positions 10 
+    Log Data  - Retrieves all Data from the Sheet then Indexes the Data
+    Then saves the current data into positions 10
     """
-    
+
     data_row_1 = [int(x) for x in data]
     data_row_2 = records.row_values(3)
     data_row_3 = records.row_values(4)
@@ -288,7 +288,7 @@ def data_retrieve():
         print("Please come back later more alert")
         failcount = 0
         data_retrieve()
-  
+
     return
 
 
@@ -297,11 +297,11 @@ def get_data_gspread():
     global function
     print("Please choose what data index you want to analyse ?")
     data_id = input("please select number between 1 to 10 :  ")
-
     validate_data_single(data_id)
 
     if validate_data_single(data_id) and (data_id > '0'):
-
+        data_id = int(data_id)
+        data_id = data_id + 1
         data_rcvd = records.row_values(data_id)
         print(f"data_rcvd{data_rcvd}")
         current_data = data_rcvd
