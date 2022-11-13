@@ -4,7 +4,7 @@ In my current Job as a controls systeme engineer we use specialise in the therma
 
 The project will allow for the user to,
 
-- Input data which is 10 temperature values that are to be processed with calculations and the data to be displayed. 
+- Input data -  10 temperature values that are to be processed with calculations and the data to be stored in google Sheet
 - Retrieve Data from a google sheets by calling a specific index number.
 - View data summary of requested data.
 
@@ -23,6 +23,11 @@ Max Temp : 222
 Min Temp :10
 Range : 212
 
+## Program Flow Chart 
+
+<p >
+  <img src="Readme_Img/Flowchart.png" width="700"  height="700" title=" program flow chart">
+</p>
 
 
 
@@ -58,57 +63,8 @@ error messages for wrong data
 
 
 
+### Multiple Programs Steps 
 
-
-
-<p >
-  <img src="Readme_Img/Flowchart.png" width="700"  height="700" title=" program flow chart">
-</p>
-
-
-
-
-       1 - Stlyish Header with Tennis Font Syling Image 
-       2 - Large heading text given celtic text stlying to tie in with "Eire" Website Name
-       3 - Inpriation quote and including welcome text to grab peoples attention and interest 
-       4 - Immeadiate link to sign up page to get more clicks to sing up page as this is purpose of website 
-       5 - Immeadiate introduction to the coachs in a bright and inviting display.
-       6 - Critical information displayed on main page aka the when and where of lessons
-       7 - Google maps location feature added to assist in customer understanding of location
-       8 - Footer with social media links that open new tab accross all pages 
-
-### Lessons Page 
-
-<p >
-  <img src="images/Lessons_1.png" width="400"  height="400" title="Lessons 1 ">
-</p>
-
-<p >
-  <img src="images/Lessons_2.png" width="400"  height="400" title="Lessons 2 ">
-</p>
-
-<p >
-  <img src="images/Lessons_3.png" width="400"  height="400" title="Lessons 3 ">
-</p>
-
- 
-       1 - Color scheme given to each section to tie in with the Eire website name 
-       2 - Representative photos given to each section 
-       3 - More detialed information of the options for coaching avaialble 
-       4 - Again multiple well place links to sign up page to get more clicks to sing up page as this is purpose of website 
-
-### Sign Up page 
- 
-
-<p >
-  <img src="images/Signup_1.png" width="400"  height="400" title="Sign Up Page ">
-</p>
-
-
-       1 - Background image 
-       2 - Radio buttons to gather information about the possbile new customer 
-       3 - Text/email inputs with sign up button to gather possible new customer details 
-       4 - Inputs made required to make sure User inputs data before Submit 
 
 
 ## Deployment
@@ -146,13 +102,6 @@ Div inside Span  - To create inline blocks on my intro area I used Span function
  Lots of open or not closed HTML Commands such Divs/a/ , spelling mistakes on command such "l1"insead of "li" on some ordered lists.
 
 
-#### Light House accesibility Score 
-
-<p >
-  <img src="images/Accessibility_Score.png" width="800"  height="250" title="Sign Up Page ">
-</p>
-
-90+ Rating for accessbibilty Score Acheived. 
 
 #### Screen Size Testing 
 

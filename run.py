@@ -57,6 +57,45 @@ def main():
         data_analysis()
 
 
+def log_data(data):
+    """
+    Log Data  - Retrieves all Data from the Sheet then Indexes the Data 
+    Then saves the current data into positions 10 
+    """
+    
+    data_row_1 = [int(x) for x in data]
+    data_row_2 = records.row_values(3)
+    data_row_3 = records.row_values(4)
+    data_row_4 = records.row_values(5)
+    data_row_5 = records.row_values(6)
+    data_row_6 = records.row_values(7)
+    data_row_7 = records.row_values(8)
+    data_row_8 = records.row_values(9)
+    data_row_9 = records.row_values(10)
+    data_row_10 = records.row_values(11)
+
+    data_row_2 = [int(x) for x in data_row_2]
+    data_row_3 = [int(x) for x in data_row_3]
+    data_row_4 = [int(x) for x in data_row_4]
+    data_row_5 = [int(x) for x in data_row_5]
+    data_row_6 = [int(x) for x in data_row_6]
+    data_row_7 = [int(x) for x in data_row_7]
+    data_row_8 = [int(x) for x in data_row_8]
+    data_row_9 = [int(x) for x in data_row_9]
+    data_row_10 = [int(x) for x in data_row_10]
+
+    records.update("A2:J2", [data_row_2])
+    records.update("A3:J3", [data_row_3])
+    records.update("A4:J4", [data_row_4])
+    records.update("A5:J5", [data_row_5])
+    records.update("A6:J6", [data_row_6])
+    records.update("A7:J7", [data_row_7])
+    records.update("A8:J8", [data_row_8])
+    records.update("A9:J9", [data_row_9])
+    records.update("A10:J10", [data_row_10])
+    records.update("A11:J11", [data_row_1])
+
+
 def intro_short():
     """
     Rountine Used to restart the programs without long intro 
@@ -104,13 +143,14 @@ def load_cylce_data():
     if validate_data(current_data):
         print("data input Ok")
         function = 3
+        log_data(current_data)
         main()
     else:
         print("data input nOk")
         print("Data should be in this type of format\n")
         print("'10,30,50,120,200,220,222,221,220,50'\n")
         print("\n")
-        function = 1 
+        function = 1
         main()
     return
 
@@ -184,7 +224,7 @@ def data_analysis():
 
     intro_short()
 
-    
+
 def check_answer_intro(answer_1):
     """
     Check Y or N answer and define next function to be called. 
@@ -208,11 +248,11 @@ def check_answer_intro(answer_1):
 
 def check_answer_rcv(answer_2):
     """
-    Check Y or N answer and define next function to be called. 
-    or if incorrect data then count failure and retry 
+    Check Y or N answer and define next function to be called.
+    or if incorrect data then count failure and retry
     """
     global function
-    
+
     if answer_2 == ("Y"):
         get_data_gspread()
         return 
@@ -284,8 +324,8 @@ def count_fail():
 
 def successful_entry():
     """
-    Resets counter for Fail Y or N input 
-    after good input 
+    Resets counter for Fail Y or N input
+    after good input
     """
     global failcount
     failcount == 0
