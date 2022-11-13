@@ -202,90 +202,101 @@ For deployment of this project we used the Heroku platform. Heroku is a platform
 - Select program as git hub and link git hub account 
 - Select Temperatures analysis program
 - Go to Manual Deplay and Build package 
-
+<br />
+<br />
 
 ## Testing & Validation   
-
-### W3 Validation was carried out - 
-
-<p >
-  <img src="images/Lessons_W3_Report.png" width="400"  height="400" title="Sign Up Page ">
-</p>
+<br />
 
 
-
-#### Some major issues Found - Index Page / Lessons Page
-
-Div inside Span  - To create inline blocks on my intro area I used Span functionality then to later stlye the content for this area I enclosed items in the intro area in Divs.
- Upon Running the W3 Code validator This was flagged up asan error, See Errow Below, 
- "Error: Element "div" not allowed as child of element "span" in this context"
- To rectify this I need to restructure my Divs and Us the Block/ Inline display funtion to get the items to appear as desired. I learned that images are automatically there own inline block and behave as so. This was throwing me off for a while as I kept trying to define my images as inline block along with  block of text to go along with it but it would not behave as expected. 
- After I realised images act as inline blocks inherently then the process was alot easier to get right. \\
-
- #### Minor issues 
-
- Lots of open or not closed HTML Commands such Divs/a/ , spelling mistakes on command such "l1"insead of "li" on some ordered lists.
-
-
-
-#### Screen Size Testing 
-
-The Pages where tested at different resulutions via google chrome inspect dev tools toolbar. 
-The Viewport set points for media queries where design around the values 800px & 1200px 
-
-#### Browser 
-
-Pages checked on multiple broswers namelt, Chrome, firefox and Microsoft Edge. 
-
-#### CSS Valicator 
+- Validator recommend to use was down at the time of validation occurring. 
+- Students were advised to perform this work around. 
+- These steps were carried out as per instructions in git hub enviroment. 
 
 <p >
-  <img src="images/CSS_Errors.png" width="800"  height="250" title="Sign Up Page ">
+  <img src="Readme_Img/Pep8_Workaround.png" width="700"  height="350" title=" program flow chart">
 </p>
 
-The following Errors where present when the CSS validator was ran. They have all been resovled. 
+<br />
+<br />
 
-## Credits 
+- Also Validated code on other validators - code came bakc as "Good" with some white space removal hints. 
 
-The following websites/orgs where extremely helpful in assiting with my understanding of what is requried and inspiration for what is the standard for this type of website.
+<p >
+  <img src="Readme_Img/Validator.png" width="700"  height="350" title=" program flow chart">
+</p>
+
+<br />
+<br />
 
 ### Technical assitance credits 
 
-W3 School
-W3 Code validator 
-Stack Over flow 
-Kevin Powell - Youtube Channel 
+Credits List
 
-### Inspitation Assistance credits and allocation of some images 
+<br />
+<br />
 
-        alsaa tennis club - website 
-        euroschooloftennis -  website - for text content and some images. 
+- Credit 1 - Info used for working with gSpread
 
-### Stock images 
+- Link 1 -  https://docs.gspread.org/en/latest/user-guide.html
 
-      Pxhere.com 
+<br />
+<br />
+
+- Credit 2 - Info for converting list data type to all integers
+
+- Link 2 -  https://www.geeksforgeeks.org/python-converting-all-strings-in-list-to-integers/
+
+<br />
+<br />
+
+- Credit 3 - Copied Code used for Switch/Case Function in programs 
+
+<br />
+
+     switch(lang):
+<br />
+
+    if lang == "JavaScript":
+
+<br />
+
+        return "You can become a web developer."
+    elif lang == "PHP":
+
+<br />
+       return "You can become a backend developer."
+
+<br />
+
+- Link 3 -  https://www.freecodecamp.org/news/python-switch-statement-switch-case-example/
+
+<br />
+<br />
+
+- Credit 4 - Copied Code used to insert data to Sheet  - "sheet1.update("A8:C8", [["Texas", 5261485, 5261485]]" 
+
+<br />
+
+
+- Link 4 - https://www.codeforests.com/2020/11/22/gspread-read-write-google-sheet/
+
+<br />
+<br />
+
+### Inspitation Assistance for applications
+
+- HTE Emerson Technology applications 
+
+<br />
+<br />
 
 
 ### Other mentions
 
-Special thanks for Samantha Dartnall for her assistance and guidance throughut the project. 
-
-
-
-
-
-
+Special thanks for Samantha Dartnall for her assistance and guidance throughout the project. 
 
 
 -----
-Happy coding!
+End
 
-Credits List
-
-https://docs.gspread.org/en/latest/user-guide.html
-
-https://www.geeksforgeeks.org/python-converting-all-strings-in-list-to-integers/
-
-https://www.freecodecamp.org/news/python-switch-statement-switch-case-example/
-
-https://www.w3schools.com/python/ref_stat_stdev.asp#:~:text=stdev()%20method%20calculates%20the,clustered%20closely%20around%20the%20mean.

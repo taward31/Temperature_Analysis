@@ -98,7 +98,7 @@ def log_data(data):
 
 def intro_short():
     """
-    Rountine Used to restart the programs without long intro 
+    Rountine Used to restart the programs without long intro
     """
     global failcount
 
@@ -121,9 +121,8 @@ def intro_short():
         print("Please come back later more alert")
         failcount = 0
         intro_short()
-  
     return
- 
+
 
 def load_cylce_data():
     """
@@ -212,8 +211,8 @@ def data_analysis():
     list_of_integers = list(map(int, current_data))
     total = sum(list_of_integers)
     mean = total/10
-    temp_max = max(list_of_integers) 
-    temp_min = min(list_of_integers) 
+    temp_max = max(list_of_integers)
+    temp_min = min(list_of_integers)
     temp_range = temp_max - temp_min
     print(f"Start Temperature =: {list_of_integers[0]}")
     print(f"End Temperature =: {list_of_integers[9]}")
@@ -227,14 +226,14 @@ def data_analysis():
 
 def check_answer_intro(answer_1):
     """
-    Check Y or N answer and define next function to be called. 
-    or if incorrect data then count failure and retry 
+    Check Y or N answer and define next function to be called.
+    or if incorrect data then count failure and retry
     """
     global function
-    
+
     if answer_1 == ("Y"):
         function = 1
-        return 
+        return
     if answer_1 == ("N"):
         function = 2
         return
@@ -255,7 +254,7 @@ def check_answer_rcv(answer_2):
 
     if answer_2 == ("Y"):
         get_data_gspread()
-        return 
+        return
     if answer_2 == ("N"):
         intro_short()
     else:
@@ -315,7 +314,7 @@ def get_data_gspread():
 
 def count_fail():
     """
-    Counter for Fail Y or N input 
+    Counter for Fail Y or N input
     """
     global failcount
     failcount = failcount + 1
