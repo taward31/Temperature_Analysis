@@ -1,6 +1,9 @@
 # Temperature Analysis Program
 
-In my current Job as a controls systeme engineer we use specialise in the thermal welding of plastics. I used this background as my inspiration for the idea for the project. 
+In my current Job as a controls systeme engineer we specialise in the thermal welding of plastics. I used this background as my inspiration for the idea for the project. After every Cycle of Temperature increase to perform welding data points are to be taken at set timed intervals. These data points can then be loaded into this Temperature Analysis Program for further analysis. 
+
+<br />
+<br />
 
 The project will allow for the user to,
 
@@ -8,75 +11,197 @@ The project will allow for the user to,
 - Retrieve Data from a google sheets by calling a specific index number.
 - View data summary of requested data.
 
+<br />
+<br />
+
 Some examples of the data that can be input, 
 
-10,30,50,120,200,220,222,221,220,50
-40,90,110,120,200,225,222,221,220,20
-25,30,50,120,200,220,222,221,220,50
+- 10,30,50,120,200,220,222,221,220,50
+- 40,90,110,120,200,225,222,221,220,20
+- 25,30,50,120,200,220,222,221,220,50
+
+<br />
+<br />
 
 Sample of the Result the user can expect from the data analysis
 
-Start Temperature : 10
-End Temperature : 50
-Average : 134.3
-Max Temp : 222
-Min Temp :10
-Range : 212
+- Start Temperature : 10
+- End Temperature : 50
+- Average : 134.3
+- Max Temp : 222
+- Min Temp :10
+- Range : 212
+  
+<br />
+<br />
+
 
 ## Program Flow Chart 
 
+### Program Flow can be seen in Flow Chart Below
+<br />
 <p >
-  <img src="Readme_Img/Flowchart.png" width="700"  height="700" title=" program flow chart">
+  <img src="Readme_Img/Flowchart.png" width="800"  height="800" title=" program flow chart">
 </p>
 
+<br />
+<br />
 
 
-## Program Questions / Queries
+## Program Questions / Queries - Screen Step Through 
+<br />
 
-### Intro Message 
+###  Step 1 : Intro Message 
+<br />
 
 <p >
   <img src="Readme_Img/temp_analysis_intro.png" width="700"  height="400" title=" program flow chart">
 </p>
+<br />
 
 - The intro gives the user a brief description of what the program does and what they can expect
 
 - Then the User is prompted with the first quesiton they can answer using the Y or N keys
+<br />
+<br />
 
-
-
-
-
-### User Selects "Y"
-
-Please enter the Cycle Temperatures - 10 Entries Required
-Seperate the Values by a Comma (,)
-Enter Here: 
-
-- The User selects Y  and wants to input new Temperature Readings 
-- User is then prompted to input data - with some info as to what is reqquired.
-
-error messages for wrong data 
-
-" Error messages 1 & 2
-
-
-
-
-### Multiple Programs Steps 
-
-
-
-## Deployment
-
-For deploymet, I used git hub pages. This "Pages" feature in the settings allows for deloyment of small/medium projects. 
-To acheive this I had to research the latest method via youtube and other online links due to the codes institutes content being dated. (git hub pages has been updated since last video from code institute). 
-
-
+### Step 2 : User Selects "Y"
+<br />
 
 <p >
-  <img src="images/GitHub_Pages.png" width="400"  height="400" title="Sign Up Page ">
+  <img src="Readme_Img/input_values.png" width="700"  height="250" title=" program flow chart">
 </p>
+
+
+- The User selects Y  and wants to input new Temperature Readings 
+- User is then prompted to input data - with some info as to what is required.
+<br />
+<br />
+
+### Step 3 : Succesful Data Entry from User 
+<br />
+
+<p >
+  <img src="Readme_Img/data_ok.png" width="700"  height="250" title=" program flow chart">
+</p>
+
+- The User inputs the correct the data - Program informs them Data Ok.
+- Program stores data in Sheet.
+- Program runs Data analysis of input data and show input.
+<br />
+<br />
+
+### Step 4 : Program Begins Loop Again 
+<br />
+
+<p >
+  <img src="Readme_Img/Program_Loop.png" width="700"  height="120" title=" program flow chart">
+</p>
+
+- Programs Restarts without the long intro message 
+<br />
+<br />
+
+### Step 5 : User Selects "N" 
+<br />
+
+<p >
+  <img src="Readme_Img/Retrieve_Question.png" width="700"  height="120" title=" program flow chart">
+</p>
+
+- When user answers "N" The program then asks them to they want to retrieve data for Google Spread Sheets
+<br />
+<br />
+
+### Step 6 : User Selects "Y" to Retrieve Question
+<br />
+
+<p >
+  <img src="Readme_Img/Input_Retrieve.png" width="700"  height="120" title=" program flow chart">
+</p>
+
+- User is prompted to select an index value to retireve data options are 1-10 
+<br />
+<br />
+
+### Step 7 : Data Gets Retrieved and Programs Gives Data Anaylsis
+<br />
+
+<p >
+  <img src="Readme_Img/Retrieved_Data.png" width="700"  height="250" title=" program flow chart">
+</p>
+
+
+- Once the Data Gets Retrieved the Programs Gives Data Anaylsis and Program Agains loops back to Start
+<br />
+<br />
+
+
+## Error Input Handling 
+<br />
+
+## Error Inputs Y or N
+
+<p >
+  <img src="Readme_Img/Fail_Y_N.png" width="700"  height="350" title=" program flow chart">
+</p>
+
+- If user inputs Wrong data to the Y or N Questions they get the message,
+  "You have entered incorrect data - Please Enter Y or N "
+
+- After Inputting wrong data wrong 3 times User gets a Low Caffiene Level Warning and is advised to 
+  top up caffiene levels and come back later whilst more alert. 
+<br />
+<br />
+
+
+## Error Inputs Temperature Values - Data Type 
+
+<p >
+  <img src="Readme_Img/Error_Data_Type.png" width="700"  height="350" title=" program flow chart">
+</p>
+
+- Example If user inputs Wrong data aka String instead of Int
+<br />
+<br />
+
+
+## Error Inputs Temperature Values - Incorrect Amount of Values 
+
+<p >
+  <img src="Readme_Img/error_amount.png" width="700"  height="350" title=" program flow chart">
+</p>
+
+- Example If user inputs 9 values by mistake instead of 10
+ 
+<br />
+<br />
+
+## Deployment - Heroku 
+
+For deployment of this project we used the Heroku platform. Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+<br />
+
+### Step 1 - Adding Build Packages 
+
+<p >
+  <img src="Readme_Img/Heroku_BuildPacks.png" width="700"  height="350" title=" program flow chart">
+</p>
+
+- Python Package 
+- Node JS 
+<br />
+<br />
+
+### Step 2 - Manual Deployment 
+
+<p >
+  <img src="Readme_Img/Manual_Deploy.png" width="700"  height="350" title=" program flow chart">
+</p>
+
+- Select program as git hub and link git hub account 
+- Select Temperatures analysis program
+- Go to Manual Deplay and Build package 
 
 
 ## Testing & Validation   
